@@ -7,7 +7,8 @@ defmodule Axp209Ale.Mixfile do
      elixir: "~> 1.4",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
-     deps: deps()]
+     deps: deps(),
+     docs: docs()]
   end
 
   # Configuration for the OTP application
@@ -33,7 +34,14 @@ defmodule Axp209Ale.Mixfile do
   defp deps do
     [
       {:elixir_ale, "~> 0.5.7"},
+      {:ex_doc, "~> 0.11", only: :dev},
       {:remix, "~> 0.0.1", only: :dev}
+    ]
+  end
+
+  defp docs do
+    [ 
+      extras: ["README.md"]
     ]
   end
 end
