@@ -5,6 +5,8 @@ defmodule Axp209Ale.Mixfile do
     [app: :axp209_ale,
      version: "0.1.0",
      elixir: "~> 1.4",
+     name: "axp209_ale",
+     descriptio: description(),
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
      deps: deps(),
@@ -12,25 +14,20 @@ defmodule Axp209Ale.Mixfile do
   end
 
   # Configuration for the OTP application
-  #
-  # Type "mix help compile.app" for more information
   def application do
-    # Specify extra applications you'll use from Erlang/Elixir
     [
       extra_applications: [:logger],
       mod: {Axp209Ale, {"i2c-0", 0x34}}
     ]
   end
 
+  defp description do
+    """
+    AXP209 PMIC interface for Elixir (C.H.I.P. Power Management IC)
+    """
+  end
+
   # Dependencies can be Hex packages:
-  #
-  #   {:my_dep, "~> 0.3.0"}
-  #
-  # Or git/path repositories:
-  #
-  #   {:my_dep, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"}
-  #
-  # Type "mix help deps" for more examples and options
   defp deps do
     [
       {:elixir_ale, "~> 0.5.7"},
