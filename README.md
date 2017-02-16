@@ -1,6 +1,6 @@
-# Axp209Ale
+# axp209_ale - AXP209 PMIC Interface for Elixir
 
-**TODO: Add description**
+`axp209_ale` provides an interface to the AXP209 PMIC which is mounted on C.H.I.P. baords and maybe others. The library provides an easy to use interface to query different states such as the connected power source, the battery voltage and charging/discharging currents. The PMIC is monitored and changes are reported using `Logger`.
 
 ## Installation
 
@@ -9,7 +9,7 @@ by adding `axp209_ale` to your list of dependencies in `mix.exs`:
 
 ```elixir
 def deps do
-  [{:axp209_ale, "~> 0.1.0"}]
+  [{:axp209_ale, "~> 0.2.0"}]
 end
 ```
 
