@@ -1,11 +1,11 @@
-defmodule Axp209Ale.Mixfile do
+defmodule AleAXP209.Mixfile do
   use Mix.Project
 
   def project do
-    [app: :axp209_ale,
+    [app: :ale_axp209,
      version: "0.2.0",
      elixir: "~> 1.4",
-     name: "axp209_ale",
+     name: "ale_axp209",
      descriptio: description(),
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
@@ -17,7 +17,7 @@ defmodule Axp209Ale.Mixfile do
   def application do
     [
       extra_applications: [:logger],
-      mod: {Axp209Ale, {"i2c-0", 0x34}}
+      mod: {AleAXP209, {"i2c-0", 0x34}}
     ]
   end
 

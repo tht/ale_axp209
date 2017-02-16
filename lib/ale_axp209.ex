@@ -1,4 +1,4 @@
-defmodule Axp209Ale do
+defmodule AleAXP209 do
   @moduledoc """
   This module helps communicating with the AXP209 PMIC. This *Power Management IC* is mounted on the C.H.I.P. embedded computers.
   Make sure you start this Module as an Application to make it work. It will also monitor the state of the PMIC in background and
