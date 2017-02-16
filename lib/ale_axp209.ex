@@ -55,7 +55,17 @@ defmodule AleAXP209 do
   end
 
   @doc """
-  Returns a map describing the state of the power system.
+  Returns a map describing the state of the power system. The result is a map like this:
+
+  ```
+  %{
+    battery: true,         # Battery is connected
+    battery_voltage: 4161, # Battery voltage in mV
+    charging: false,       # Not charging
+    over_temp: false,      # Temperature of PMIC is good
+    usb_power: true        # USB Power is connected
+   }
+  ```
   """
   def read_state do
     GenServer.call __MODULE__, {:read_state}
