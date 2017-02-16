@@ -13,5 +13,5 @@ def deps do
 end
 ```
 
-Documentation is published online on [HexDocs](https://hexdocs.pm/ale_axp20) or available as download on [Hex](https://hex.pm/packages/ale_axp209).
+Documentation is published online on [HexDocs](https://hexdocs.pm/ale_axp209) or available as download on [Hex](https://hex.pm/packages/ale_axp209).
 
