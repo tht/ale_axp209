@@ -6,7 +6,8 @@ defmodule AleAXP209.Mixfile do
      version: "0.2.0",
      elixir: "~> 1.4",
      name: "ale_axp209",
-     descriptio: description(),
+     description: description(),
+     package: package(),
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
      deps: deps(),
@@ -25,6 +26,13 @@ defmodule AleAXP209.Mixfile do
     """
     AXP209 PMIC interface for Elixir (C.H.I.P. Power Management IC)
     """
+  end
+
+  defp package do
+    %{files: ["lib", "mix.exs", "README.md", "LICENSE"],
+      maintainers: ["Thomas Lohmueller"],
+      licenses: ["Unlicense"],
+      links: %{"GitHub" => "https://github.com/tht/ale_axp209"}}
   end
 
   # Dependencies can be Hex packages:
